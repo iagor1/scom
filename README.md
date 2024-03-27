@@ -10,3 +10,4 @@ Features:
 Note:
 
 The logic in the function might not be particularly complex, as the primary purpose was to practice shell scripting skills.
+More info : This cli gets some txt files, this files have commands can be used to the same pourpuse like setting ipv4 etc.
