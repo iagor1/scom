@@ -1,4 +1,0 @@
-host and dig are DNS lookup utility.
-
-host google.com
-dig google.com

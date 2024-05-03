@@ -1,51 +1,47 @@
 #!/bin/bash
 
+function1(){
+  echo "function 1"
+}
 
-welcome(){
-echo "Welcome to scom"
-echo "
- _______  _______  _______  _______ 
-(  ____ \(  ____ \(  ___  )(       )
-| (    \/| (    \/| (   ) || () () |
-| (_____ | |      | |   | || || || |
-(_____  )| |      | |   | || |(_)| |
-      ) || |      | |   | || |   | |
-/\____) || (____/\| (___) || )   ( |
-\_______)(_______/(_______)|/     \|            
+function2(){
+  echo "function 2"
+}
+
+function3(){
+  echo "function 3"
+}
+
+
+usage(){
+echo "FLAGS
+-h  help
+-s function 1
+-c function 2
+-k function 3
 "
-}
-
-help_message(){
-echo "Usage
-  scom [options] [args]"
 echo ""
-echo "Options:
-  -h        info about scom
-  -s        search for file"
-echo ""
-echo "SCOM stands for similar commands, the ideia is to centralize these commands in this CLI"
-}
-
-cat_file(){
-file=$( ls | grep *$OPTARG*.txt )
-if [ -n "$file" ];then
-echo fetching "$file" file.
-cat $file
-else echo "Command or file not found"
-fi
 }
 
 
-OPTSTRING=":hs:"
+OPTSTRING=":hsck"
 
 while getopts ${OPTSTRING} opt; do
   case ${opt} in
     h)
-      help_message
+      usage
       ;;
     s)
-      echo "Searching file/command"
-      cat_file
+      echo ""
+      function1
+      ;;
+    c)
+      echo ""
+      function2
+      ;;
+    k)
+      echo ""
+      function3
       ;;
     ?)
       echo "Invalid option: -${OPTARG}."
@@ -56,6 +52,6 @@ while getopts ${OPTSTRING} opt; do
 done
 
 if [ $# -eq 0 ]; then
-welcome
-echo "try for more details : scom.sh -h"
+echo "Missing flags, use -h"
+exit 1
 fi

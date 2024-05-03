@@ -1,15 +1,23 @@
-What is this repository?
+### What is this repository?
 
-This repository contains a custom command-line interface (CLI) built with a shell script.
+### This repository contains a custom command-line interface (CLI) built with shell script.
 
-Features:
+This code use this directive `getopts` for the flags.
 
-- The script's logic is currently implemented within a function, but this can be easily modified to suit your needs.
+### Features:
+
 - This code serves as a template that you can adapt and use freely.
 - Feel free to star the repository if you find it helpful!
 
-  
-Note:
+### How to use
 
-The logic in the function might not be particularly complex, as the primary purpose was to practice shell scripting skills.
-More info : This cli gets some txt files, this files have commands can be used to the same pourpuse like setting ipv4 etc.
+```bash
+./scom.sh -k
+./scom.sh -sck
+./scom.sh -sc
+./scom.sh -ck
+./scom.sh -c
+./scom.sh -s
+./scom.sh -k
+```
+

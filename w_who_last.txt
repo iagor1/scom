@@ -1,5 +1,0 @@
-List connected users : w | who | last -p now
-
-w
-who
-last -p now
