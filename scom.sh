@@ -1,15 +1,15 @@
 #!/bin/bash
 
 function1(){
-  echo "function 1"
+  echo "insert your code here 1"
 }
 
 function2(){
-  echo "function 2"
+  echo "insert your code here 2"
 }
 
 function3(){
-  echo "function 3"
+  echo "insert your code here 3"
 }
 
 
